@@ -1,0 +1,431 @@
+<?php
+if($_POST){
+    require_once('form.php');
+}
+?>
+<!DOCTYPE html>
+<head>
+    <title>О нас - Ипотека 77</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/touchTouch.css">
+    <!-- font-awesome font -->
+    <link rel="stylesheet" href="font/font-awesome.css" type="text/css" media="screen">
+	<script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.1.1.js"></script>
+    <script src="js/superfish.js"></script>
+    <script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <script src="js/jquery.ui.totop.js"></script>
+    <script src="js/touchTouch.jquery.js"></script>
+     <script>
+        $(window).load(function() {  
+            // Initialize the gallery
+            $('.thumb').touchTouch();
+        });
+		
+		
+     </script>
+    <!--[if (gt IE 9)|!(IE)]><!-->
+        <script src="js/jquery.mobile.customized.min.js"></script>
+    <!--<![endif]--> 
+	<!--[if lt IE 8]>
+  		<div style='text-align:center'><a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div>  
+ 	<![endif]-->
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+    <script src="assets/js/html5shiv.js"></script>
+  <![endif]-->
+	<style type="text/css">
+		/* Основной блок */
+
+			.case-min {
+				width:850px;
+				margin:15px auto;
+			}
+
+			.required {
+				color:red;
+			}
+
+			p.privacy {
+				font-size:12px;
+			}
+
+			/* Настройки формы */
+
+			.block {
+				margin:20px 20px 20px 50px;
+			}
+
+			.left {
+				float:left;
+				width:200px;
+				margin-right:15px;
+			}
+
+			.right {
+				float:left;
+				width:300px;
+			}
+
+			input {
+				width:350px;
+				height:25px;
+				padding:0 5px;
+			}
+
+			select {
+				width:150px;
+				height:25px;
+				padding:3px 5px;
+			}
+
+			div.birthday {
+				float:left;
+			}
+
+			select.birthday1 {
+				width:65px;
+			}
+			select.birthday {
+				width:140px;
+				margin:0 10px;
+			}
+
+			select.long-select {
+				width:360px;
+			}
+
+			.checkagree {
+				float:left;
+				width:50px;
+				margin-right:15px;
+			}
+
+			.btn {
+				width:150px;
+				height:35px;
+			}
+	</style>
+	<script>
+        function formSubComand(formName){
+			if (document.getElementsByName('surname')[0].value.length <3)
+				{alert('Поле "Фамилия" не заполнено либо содержит меньше 3 символов')}
+				else
+				if (document.getElementsByName('name')[0].value.length <1)
+					{alert('Поле "Имя" не заполнено')}				
+					else
+					if (document.getElementsByName('middle-name')[0].value.length <1)
+						{alert('Поле "Отчество" не заполнено')}		
+						else
+						if (document.getElementsByName('region')[0].value.length <1)
+							{alert('Поле "Регион регистрации" не заполнено')}	
+							else
+							if (document.getElementsByName('phone-first')[0].value.length <6)
+								{alert('Не указан контактный телефон либо указан слишком короткий')}					
+								else
+								if ( ! document.getElementsByName('agree')[0].checked)
+									{alert('Необходимо подтведить согласие на обработку персональных данных')}
+									else
+									document.forms[formName].submit(); 
+			}
+
+		function proverka(input) { //исключает всё кроме цифр
+		 input.value = input.value.replace(/[^\d]/g, '');
+		 }
+    </script>
+</head>
+<body>
+<!--==============================header=================================-->
+<header>
+    <div class="headtop container">
+        <h1 class="brand_"><a href="index.html"><img alt="Ипотека 77" src="img/logo.png"></a></h1>
+        <div class="container">
+            <p class="pull-right"><i class="icon-phone">&nbsp;&nbsp;</i>Позвоните нам: <span>8 (800) 555-2-556</span><br><i style="font-size:16px; margin:0 0 0 25px;">c 8-00 до 22-00 ежедневно</i></p>
+        </div>
+		<p align="left" style="font-size:12px; margin:5px 0 -20px;">Скорая помощь в ипотечных делах – помощь в получении ипотечного кредита</p>
+    </div>
+    <div class="container">
+        <div class="navbar navbar_ clearfix extra">
+          <div class="nav-collapse nav-collapse_ collapse">
+            <ul class="nav sf-menu">
+              <li><a href="index.html">Главная</a><span></span></li>
+              <li><a href="index-1.html">О нас</a><span></span></li>
+              <li><a href="index-2.html">Новости</a><span></span></li>
+              <li><a href="index-3.html">Услуги</a><span></span></li>
+			  <li class="active"><a href="index-5.html">Он-лайн заявка</a><span></span></li>
+			  <li><a href="index-4.html">Контакты</a><span></span></li>
+            </ul>
+          </div>
+        </div> 
+    </div>
+</header>
+<!--==============================content=================================-->
+<div id="content">
+    <!--==============================row9=================================-->
+    <div class="row_9">
+    <div class="container">
+		<h2>Срочно нужна ИПОТЕКА?</h2>
+		<br>
+        <div class="row">
+            <div class="span12"  >
+				<p>Нет времени подавать заявку самостоятельно в десяток банков, чтобы уж точно получить одобрение?</p>
+			<p>Вы внесли залог за квартиру, а нужный банк не одобрил вашу заявку?</p>
+			<p>Консультанты-профессионалы подберут вам несколько подходящих банков, помогут заполнить заявку, сами передадут в них ваш пакет документов и добьются одобрения – за 6 лет плотной работы с банками наших специалистов знают и уважают, мы сделаем это быстрее вас!</p>
+			<p>Вы платите только за результат – получение одобрения или взятая вами ипотека с нашей помощью.</p>
+			<p>Нашими партнёрами являются более 45 банков и кредитных организаций.</p>
+			<h2>Отправь заявку прямо сейчас!</h2>
+			<form name="order_form" method="POST">
+				<div class="block clearfix">
+					<div class="left">Фамилия<sup class="required">*</sup></div>
+					<div class="right"><input type="text" name="surname" value="" /></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Имя<sup class="required">*</sup></div>
+					<div class="right"><input type="text" name="name" value="" /></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Отчество<sup class="required">*</sup></div>
+					<div class="right"><input type="text" name="middle-name" value="" /></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Дата рождения<sup class="required">*</sup></div>
+					<div class="right clearfix">
+						<div class="birthday">
+							<select class="birthday1" name="birthday-day">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+								<option value="13">13</option>
+								<option value="14">14</option>
+								<option value="15">15</option>
+								<option value="16">16</option>
+								<option value="17">17</option>
+								<option value="18">18</option>
+								<option value="19">19</option>
+								<option value="20">20</option>
+								<option value="21">21</option>
+								<option value="22">22</option>
+								<option value="23">23</option>
+								<option value="24">24</option>
+								<option value="25">25</option>
+								<option value="26">26</option>
+								<option value="27">27</option>
+								<option value="28">28</option>
+								<option value="29">29</option>
+								<option value="30">30</option>
+								<option value="31">31</option>
+							</select>
+						</div>
+						<div class="birthday">
+							<select class="birthday" name="birthday-month">
+								<option value="1">Январь</option>
+								<option value="2">Февраль</option>
+								<option value="3">Март</option>
+								<option value="4">Апрель</option>
+								<option value="5">Май</option>
+								<option value="6">Июнь</option>
+								<option value="7">Июль</option>
+								<option value="8">Август</option>
+								<option value="9">Сентябрь</option>
+								<option value="10">Октябрь</option>
+								<option value="11">Ноябрь</option>
+								<option value="12">Декабрь</option>
+							</select>
+						</div>
+						<div class="birthday">
+							<select class="birthday1" name="birthday-year">
+								<option value="1996">1996</option>
+								<option value="1995">1995</option>
+								<option value="1994">1994</option>
+								<option value="1993">1993</option>
+								<option value="1992">1992</option>
+								<option value="1991">1991</option>
+								<option value="1990">1990</option>
+								<option value="1989">1989</option>
+								<option value="1988">1988</option>
+								<option value="1987">1987</option>
+								<option value="1986">1986</option>
+								<option value="1985">1985</option>
+								<option value="1984">1984</option>
+								<option value="1983">1983</option>
+								<option value="1982">1982</option>
+								<option value="1981">1981</option>
+								<option value="1980">1980</option>
+								<option value="1979">1979</option>
+								<option value="1978">1978</option>
+								<option value="1977">1977</option>
+								<option value="1976">1976</option>
+								<option value="1975">1975</option>
+								<option value="1974">1974</option>
+								<option value="1973">1973</option>
+								<option value="1972">1972</option>
+								<option value="1971">1971</option>
+								<option value="1970">1970</option>
+								<option value="1969">1969</option>
+								<option value="1968">1968</option>
+								<option value="1967">1967</option>
+								<option value="1966">1966</option>
+								<option value="1965">1965</option>
+								<option value="1964">1964</option>
+								<option value="1963">1963</option>
+								<option value="1962">1962</option>
+								<option value="1961">1961</option>
+								<option value="1960">1960</option>
+								<option value="1959">1959</option>
+								<option value="1958">1958</option>
+								<option value="1957">1957</option>
+								<option value="1956">1956</option>
+								<option value="1955">1955</option>
+								<option value="1954">1954</option>
+								<option value="1953">1953</option>
+								<option value="1953">1952</option>
+								<option value="1953">1951</option>
+								<option value="1953">1950</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Гражданство РФ<sup class="required">*</sup></div>
+					<div class="right"><select name="nationality"><option value="1" selected>Да</option><option value="0">Нет</option></select></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Регион регистрации<sup class="required">*</sup></div>
+					<div class="right"><input type="text" name="region" value="" /></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Телефон<sup class="required">*</sup> (только цифры)</div>
+					<div class="right"><input type="text" name="phone-first" value="" num="1" rel="только цифры" size='30' onkeyup="return proverka(this);"/></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Телефон дополнительный (только цифры)</div>
+					<div class="right"><input type="text" name="phone-second" value="" num="1" rel="только цифры" size='30' onkeyup="return proverka(this);"/></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Хочу подать заявку на услугу</div>
+					<div class="right">
+						<select class="long-select" name="service">
+							<option value="подать 1 заявку на ипотеку в разные банки">подать 1 заявку на ипотеку в разные банки</option>
+							<option value="получить помощь в одобрении в нескольких банках">получить помощь в одобрении в нескольких банках</option>
+						</select>
+					</div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Цель кредита</div>
+					<div class="right">
+						<select class="long-select" name="purpose">
+							<option value="покупка квартиры на вторичном рынке">покупка квартиры на вторичном рынке</option>
+							<option value="покупка квартиры на первичном рынке">покупка квартиры на первичном рынке</option>
+							<option value="покупка дома с землей">покупка дома с землей</option>
+							<option value="покупка земли">покупка земли</option>
+							<option value="покупка комнаты">покупка комнаты</option>
+							<option value="получение наличных под залог имеющейся недвижимости">получение наличных под залог имеющейся недвижимости</option>
+						</select>
+					</div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Сумма кредита (руб)</div>
+					<div class="right"><input type="text" name="amount" value="" /></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Сумма подтверждённого дохода</div>
+					<div class="right"><input type="text" name="rent" value="" /></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Размер первоначального взноса (руб)</div>
+					<div class="right"><input type="text" name="downpayment" value="" /></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Стаж на последнем месте работы</div>
+					<div class="right">
+						<select class="long-select" name="experience-naim">
+							<option value="не работаю">не работаю</option>
+							<option value="до 3 мес">до 3 мес</option>
+							<option value="более 3 мес">более 3 мес</option>
+							<option value="более года">более года</option>
+						</select>
+					</div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Форма подтверждения дохода</div>
+					<div class="right">
+						<select class="long-select" name="verification-naim">
+							<option value="справка 2-НДФЛ">справка 2-НДФЛ</option>
+							<option value="справка 2-НДФЛ и справка по форме банка" selected>справка 2-НДФЛ и справка по форме банка</option>
+							<option value="нет ни 2-НДФЛ, ни справки по форме банка">нет ни 2-НДФЛ, ни справки по форме банка</option>
+						</select>
+					</div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Когда нужны деньги</div>
+					<div class="right"><input type="text" name="receipt" value="" /></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Узнать больше про дополнительные сервисы</div>
+					<div class="right">
+						<select class="long-select" name="servises">
+							<option value="По ремонту" selected>По ремонту</option>
+							<option value="По страховке">По страховке</option>
+							<option value="По юридической помощи">По юридической помощи</option>
+						</select>
+					</div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Семейное положение</div>
+					<select class="long-select" name="marital">
+							<option value="женат (замужем)" selected>женат (замужем)</option>
+							<option value="холост (разведён, вдовец)">холост (разведён, вдовец)</option>
+						</select>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Созаемщики</div>
+					<div class="right"><select name="dop1"><option value="1" selected>есть</option><option value="0">нет</option></select></div>
+				</div>
+				<div class="block clearfix">
+					<div class="left">Судимость</div>
+					<div class="right"><select name="dop2"><option value="1" selected>не было (снята)</option><option value="0">есть</option></select></div>
+				</div>
+				<div class="block clearfix">
+					<input type="checkbox" name="agree" value="1" class="checkagree"> Согласен на обработку моих персональных данных<sup>**</sup>.
+				</div>
+				<div class="block clearfix">
+					<div class="left">&nbsp;</div>
+					<div class="right"><input type="button" class="btn" onclick="formSubComand('order_form');" value="Отправить"></div>
+				</div>
+			</form>
+			<p class="privacy required">* Поля помеченные звездочкой обязательны для заполнения.</p>
+			<p class="privacy">** Соглашаюсь с условиями использования данного сайта и передаю  консультанту ипотечного брокера ООО «Московский Ипотечный Альянс» и его партнерам банкам и ипотечным брокерам персональные сведения обо мне, указанные Федеральном законе №152-ФЗ от 27.07.2006  года "О персональных данных", для их последующей обработки (сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение, уточнение сведений предоставленных в настоящей заявке  исключительно в целях  предложения (подбора) мне оптимальных условий по ипотечному кредитованию.<br>
+			Срок и условие прекращения обработки персональных данных ликвидация юридического лица.</p>
+            </div>
+        </div>                  
+    </div>
+    </div>
+</div>
+<!--==============================footer=================================-->
+<footer>
+    <div class="container">
+        <p>&copy; Ипотечный брокер ООО «Ипотека 77» 2006 - 2014</p>
+		<p>Использование материалов возможно только со ссылкой на источник ООО «Ипотека 77». При использовании материалов сайта на страницах электронных СМИ и сайтов должна присутствовать активная ссылка на <a href="/">главную страницу</a>.</p>
+    </div>
+</footer>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
