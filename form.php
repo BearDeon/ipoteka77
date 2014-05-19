@@ -1,11 +1,14 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
+require_once 'conf/site.php';
+require_once 'classes/PHPExcel.php';
+
 $id = time();
 
-$filename= 'doc/'.$id.'.xlsx';
+$fileName = $id.'.xlsx';
+$filePath = $siteConf['xlsxDir'].$fileName;
 
-require_once 'classes/PHPExcel.php';
 
 function cellColor($cells,$color){
     global $objPHPExcel;
@@ -138,4 +141,27 @@ $objPHPExcel->getActiveSheet()->setTitle('Заявка');
 $objPHPExcel->setActiveSheetIndex(0);
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
    
-$objWriter->save($filename);
+$objWriter->save($filePath);
+
+
+//* Отправляем на FTP
+
+$ftpServer = $siteConf['remoteHost'];
+$ftpUserName = $siteConf['remoteLogin'];
+$ftpUserPass = $siteConf['remotePass'];
+
+
+$serverFile = $siteConf['remoteDir'].$fileName;
+
+if(file_exists($filePath)){
+
+    $connId = ftp_connect($ftpServer);
+
+    ftp_login($connId, $ftpUserName, $ftpUserPass);
+
+    ftp_pasv($connId, true);
+    
+    ftp_put($connId, $serverFile, $filePath, FTP_BINARY);
+
+    ftp_close($connId);
+}
