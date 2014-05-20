@@ -5253,3 +5253,17 @@ a.badge:focus {
 .affix {
   position: fixed;
 }
+
+.servises {
+    line-height: 0;
+}
+.servises label{
+    display: table;   
+    margin-top: 2px;
+}
+
+.servises input[type="checkbox"]{
+    float: left;
+    margin-right: 5px;
+    margin-top: 0px;
+}

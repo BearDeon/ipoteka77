@@ -94,7 +94,7 @@ $hearderCellArray = array(
     array('стаж на последнем месте работы', $experienceNaim),
     array('когда нужны деньги', $receipt),
     array('как будет подтверждать доход', $verificationNaim),
-    array('дополнительные запросы', $servises),
+    array('дополнительные запросы', $servises[0]),
     array('семейное положение', $marital),
     array('созаемщики', $dop1),
     array('судимость', $dop2),
@@ -132,6 +132,20 @@ $activeSheet->getStyle('L2')->applyFromArray(
         )
     )
 );
+
+if(count($_POST['servises']) > 1){
+    
+    $i = 2;
+    foreach ($_POST['servises'] as $k=>$v){
+        
+        if($i > 2){
+            $activeSheet->setCellValue('R'.$i, $v);
+            $activeSheet->getStyle('R'.$i)->applyFromArray($valueItalicStyleArray);
+        }
+        
+        $i++;
+    }
+}
 
 $activeSheet->getStyle('J2:K2')->applyFromArray($valueItalicStyleArray);
 $activeSheet->getStyle('O2:V2')->applyFromArray($valueItalicStyleArray);

@@ -391,12 +391,12 @@ if($_POST){
 				<div class="block clearfix">
 					<div class="left">Узнать больше про дополнительные сервисы</div>
 					<div class="right">
-						<select class="long-select" name="servises">
-							<option value="По ремонту" selected>По ремонту</option>
-							<option value="По страховке">По страховке</option>
-							<option value="По юридической помощи">По юридической помощи</option>
-						</select>
-					</div>
+                                            <div class="servises">
+                                                <input type="checkbox" name="servises[]" value="По ремонту" id="servises1" /> <label for="servises1">По ремонту</label><br>
+                                                <input type="checkbox" name="servises[]" value="По страховке" id="servises2" /> <label for="servises2">По страховке</label><br>
+                                                <input type="checkbox" name="servises[]" value="По юридической помощи" id="servises3" /> <label for="servises3">По юридической помощи</label>
+                                            </div>
+                                        </div>
 				</div>
 				<div class="block clearfix">
 					<div class="left">Семейное положение</div>
